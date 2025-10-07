@@ -1,20 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: online-boutique
+  name: sprint-boutique-kubernets
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/<seu-usuario>/online-boutique-gitops.git'
+    repoURL: 'https://github.com/SEU-USUARIO/SEU-REPO.git'
     targetRevision: HEAD
-    path: 'release'
+    path: 'gitops-microservices/k8s'  # <- caminho correto para seus manifests
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: boutique           # <- namespace de destino no cluster
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
