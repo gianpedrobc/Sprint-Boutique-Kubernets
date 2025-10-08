@@ -12,12 +12,7 @@ Neste projeto vamos:
 
 ## Diagrama (arquitetura simplificada)
 
-<h3 align="center">Arquitetura do Projeto</h3>
-
-<p align="center">
-  <img src="files/diagrama-argo-rancher.png" alt="Diagrama simplificado" width="600">
-</p>
-
+imagem: ![Diagrama simplificado](files/diagrama-argo-rancher.png)
 
 ## Pré-requisitos — checando e instalando (passo a passo)
 
