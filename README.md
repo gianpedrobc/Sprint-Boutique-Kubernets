@@ -12,7 +12,7 @@ Neste projeto vamos:
 
 ## Diagrama (arquitetura simplificada)
 
-imagem: ![Diagrama simplificado](files/diagrama-argo-rancher.png)
+imagem: ![Diagrama simplificado](file/gitops-argocd.drawio.png)
 
 ## Pré-requisitos — checando e instalando (passo a passo)
 
