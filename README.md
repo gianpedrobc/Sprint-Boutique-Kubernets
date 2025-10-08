@@ -12,7 +12,12 @@ Neste projeto vamos:
 
 ## Diagrama (arquitetura simplificada)
 
-imagem: ![Diagrama simplificado](files/diagrama-argo-rancher.png)
+<h3 align="center">Arquitetura do Projeto</h3>
+
+<p align="center">
+  <img src="files/diagrama-argo-rancher.png" alt="Diagrama simplificado" width="600">
+</p>
+
 
 ## Pré-requisitos — checando e instalando (passo a passo)
 
@@ -98,7 +103,10 @@ Login no ArgoCD:
 * Usuário: `admin`
 * Senha: (saída do comando acima)
 
-imagem: ![Foto da pagina admin ArgoCd](files/arfocd-admin.jpg)
+<p align="center">
+  <img src="file/arfocd-admin.jpg" alt="Foto da página admin ArgoCD" width="700">
+</p>
+
 
 
 ## Preparar o repositório Git
@@ -144,9 +152,19 @@ Passos para preparar:
    * Sync Policy: selecionar **Automatic** 
 3. Clique em **Create**.
 4. Imagens: 
-imagem: ![Configuracão da ArgoCd](files/config-kubernets3.jpg)
-imagem: ![Configuracão da ArgoCd](files/config-kubernets5.jpg)
-imagem: ![Configuracão da ArgoCd](files/config-kubernets4.jpg)
+<h3 align="center">Configuração do ArgoCD</h3>
+
+<p align="center">
+  <img src="file/config-kubernets3.jpg" alt="Configuração da ArgoCD - Etapa 1" width="700">
+</p>
+
+<p align="center">
+  <img src="file/config-kubernets5.jpg" alt="Configuração da ArgoCD - Etapa 2" width="700">
+</p>
+
+<p align="center">
+  <img src="file/config-kubernets4.jpg" alt="Configuração da ArgoCD - Etapa 3" width="700">
+</p>
 
 ## ETAPA 8 — Testar o aplicativo
 
@@ -169,10 +187,20 @@ kubectl port-forward svc/frontend -n boutique 8081:80
 Observações:
 
 * Mantenha o terminal com `port-forward` aberto enquanto estiver usando a aplicação.
+<h3 align="center">Aplicativo Online Boutique</h3>
 
-imagem: ![Foto do APP boutique](files/boutique1.jp)
-imagem: ![Foto do APP boutique](files/boutique2.jpg)
-imagem: ![Foto do APP boutique](files/boutique3.jpg)
+<p align="center">
+  <img src="file/boutique1.jpg" alt="Foto do APP Boutique - Tela 1" width="700">
+</p>
+
+<p align="center">
+  <img src="file/boutique2.jpg" alt="Foto do APP Boutique - Tela 2" width="700">
+</p>
+
+<p align="center">
+  <img src="file/boutique3.jpg" alt="Foto do APP Boutique - Tela 3" width="700">
+</p>
+
 
 
 
