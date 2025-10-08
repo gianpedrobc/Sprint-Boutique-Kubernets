@@ -98,6 +98,8 @@ Login no ArgoCD:
 * Usuário: `admin`
 * Senha: (saída do comando acima)
 
+imagem: ![Foto da pagina admin ArgoCd](files/arfocd-admin.jpg)
+
 
 ## Preparar o repositório Git
 
@@ -127,8 +129,6 @@ Passos para preparar:
 
 ## ETAPA 7 — Conectar o ArgoCD ao seu repositório
 
-
-
 ### ArgoCD Application Web
 
 1. No painel do ArgoCD clique **NEW APP**.
@@ -143,7 +143,10 @@ Passos para preparar:
    * Destination Namespace: `boutique`
    * Sync Policy: selecionar **Automatic** 
 3. Clique em **Create**.
-
+4. Imagens: 
+imagem: ![Configuracão da ArgoCd](files/config-kubernets3.jpg)
+imagem: ![Configuracão da ArgoCd](files/config-kubernets5.jpg)
+imagem: ![Configuracão da ArgoCd](files/config-kubernets4.jpg)
 
 ## ETAPA 8 — Testar o aplicativo
 
@@ -152,8 +155,6 @@ Passos para preparar:
 ```bash
 kubectl create namespace boutique
 ```
-
-(Se usar `CreateNamespace=true` em `syncOptions`, ArgoCD pode criar o namespace automaticamente; criar manualmente evita erros.)
 
 ## Acessar o frontend da Online Boutique
 
@@ -168,6 +169,13 @@ kubectl port-forward svc/frontend -n boutique 8081:80
 Observações:
 
 * Mantenha o terminal com `port-forward` aberto enquanto estiver usando a aplicação.
+
+imagem: ![Foto do APP boutique](files/boutique1.jp)
+imagem: ![Foto do APP boutique](files/boutique2.jpg)
+imagem: ![Foto do APP boutique](files/boutique3.jpg)
+
+
+
 
 ## Solução de erros comuns (Que passei)
 
