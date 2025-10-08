@@ -15,7 +15,7 @@ Neste projeto vamos:
 <h3 align="center">Arquitetura do Projeto</h3>
 
 <p align="center">
-  <img src="file/diagrama-argo-rancher.png" alt="Diagrama simplificado" width="600">
+  <img src="file/gitops-argocd.drawio.png" alt="Diagrama simplificado" width="600">
 </p>
 
 
