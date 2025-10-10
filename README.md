@@ -35,7 +35,12 @@ No Rancher Desktop:
 2. Na tela principal verifique o status: deve aparecer “Kubernetes Running” ou parecido.
 3. Em "Preferences" / "Kubernets" voce consegue ver a versão do kubernetes.
 
+## link manifesto do microservices-demo :
+o arquivo yaml que será usado para com os microservicos.
 
+```
+https://github.com/GoogleCloudPlatform/microservices-demo/blob/main/release/kubernetes-manifests.yaml
+```
 
 ## Instalar o Argo CD no cluster
 
@@ -52,11 +57,6 @@ kubectl create namespace argocd
 ### ETAPA 3 — Instalar o ArgoCD
 
 Aplicar o manifesto oficial (um único manifesto que cria CRDs, deployments, services, RBAC etc.):
-
-link:
-```
-https://github.com/GoogleCloudPlatform/microservices-demo
-```
 
 ```bash
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
@@ -137,18 +137,20 @@ sprint-boutique-kubernets/
    * Destination Namespace: `boutique`
    * Sync Policy: selecionar **Automatic** 
 3. Clique em **Create**.
+
 ---
+
 4. Imagens: 
 <h3 align="center">Configuração do ArgoCD</h3>
----
+
 <p align="center">
   <img src="file/config-kubernets3.jpg" alt="Configuração da ArgoCD - Etapa 1" width="700">
 </p>
----
+
 <p align="center">
   <img src="file/config-kubernets5.jpg" alt="Configuração da ArgoCD - Etapa 2" width="700">
 </p>
----
+
 <p align="center">
   <img src="file/config-kubernets4.jpg" alt="Configuração da ArgoCD - Etapa 3" width="700">
 </p>
@@ -174,17 +176,19 @@ kubectl port-forward svc/frontend -n boutique 8081:80
 Observações:
 
 * Mantenha o terminal com `port-forward` aberto enquanto estiver usando a aplicação.
+
 ---
+
 <h3 align="center">Aplicativo Online Boutique</h3>
----
+
 <p align="center">
   <img src="file/boutique1.jpg" alt="Foto do APP Boutique - Tela 1" width="700">
 </p>
----
+
 <p align="center">
   <img src="file/boutique2.jpg" alt="Foto do APP Boutique - Tela 2" width="700">
 </p>
----
+
 <p align="center">
   <img src="file/boutique3.jpg" alt="Foto do APP Boutique - Tela 3" width="700">
 </p>
@@ -195,20 +199,18 @@ Observações:
 
 ## Integração com Repositório Git Privado ao ArgoCd
 
-# 🚀 Integração do Argo CD com Repositório Git Privado
-
-Este guia descreve o processo completo para integrar o **Argo CD** a um **repositório Git privado**, garantindo segurança e controle total sobre o código da sua aplicação.
+Descreve o processo completo para integrar o **Argo CD** a um **repositório Git privado**, garantindo segurança e controle total sobre o código da sua aplicação.
 
 ---
 
-## 🔐 Formas de Conexão
+## Formas de Conexão
 
 O Argo CD pode se conectar a um repositório Git privado de duas maneiras:
 
 - **Usando Personal Access Token (PAT)** → método mais simples e direto.  
 - **Usando chave SSH** → ideal para ambientes mais restritos.
 
-Neste guia, faremos a configuração **via PAT**.
+Faremos a configuração **via PAT**.
 
 ---
 
@@ -224,7 +226,8 @@ Crie seu token diretamente no GitHub seguindo os passos:
 <p align="center">
   <img src="file/TOKEN-PAT.jpg" alt="Foto do PAT-GITHUB" width="700">
 </p>
----
+
+
 ## Conectando o Repositório ao ArgoCD
 
 Agora, com a URL e o PAT prontos, siga o passo a passo dentro da interface do **Argo CD (UI)**:
@@ -245,11 +248,11 @@ No formulário de conexão, insira:
 | **Repository URL** | `https://github.com/seu-usuario/seu-repositorio-privado.git` |
 | **Username** | Seu nome de usuário do GitHub (ex: `gianpedrobc`) |
 | **Password** | O seu **Personal Access Token (PAT)** criado anteriormente |
----
+
 <p align="center">
   <img src="file/ARGOCD-CONFIG1.jpg" alt="Configurancao do argocd-git privado" width="700">
 </p>
----
+
 <p align="center">
   <img src="file/ARGOCD-CONFIGRESULT.jpg" alt="Resultado da implementacão" width="700">
 </p>
@@ -282,7 +285,7 @@ mynginx/
     └── ...
 ```
 
-> Edite `values.yaml` e/ou os arquivos em `templates/` conforme necessário (nome do app, porta, image, resources, etc).
+> Edite `values.yaml` e/ou os arquivos em `templates/` conforme necessário (nome do app, porta, image, resources, etc), neste projeto não foi modificado nada.
 
 ---
 
@@ -300,9 +303,11 @@ Para acessar temporariamente a aplicação localmente:
 
 ```bash
 kubectl port-forward svc/mynginx -n nginx-demo 8082:80
-# depois abra no navegador:
-# http://localhost:8082
 ```
+
+# depois abra no navegador:
+# ```http://localhost:8082 ```  
+
 
 Se tudo funcionar e quiser limpar o ambiente de teste:
 
@@ -343,9 +348,10 @@ Se você usa acesso local via `kubectl port-forward`:
 
 ```bash
 kubectl port-forward svc/argocd-server -n argocd 8080:443
-# abra: https://localhost:8080
-# ignore o aviso de certificado (autoassinado)
 ```
+# abra: ```https://localhost:8080```
+# ignore o aviso de certificado (autoassinado)
+
 
 Faça login com seu usuário/senha do Argo CD (`admin` + senha inicial).
 
@@ -389,5 +395,5 @@ Para acessar via port-forward:
 
 ```bash
 kubectl port-forward svc/mynginx -n default 8082:80
-# abrir: http://localhost:8082
-```
+``` 
+# abrir: ```http://localhost:8082```
