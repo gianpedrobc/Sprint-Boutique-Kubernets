@@ -140,7 +140,7 @@ sprint-boutique-kubernets/
 
 ---
 
-4. Imagens: 
+# Imagens: 
 <h3 align="center">Configuração do ArgoCD</h3>
 
 <p align="center">
@@ -306,7 +306,7 @@ kubectl port-forward svc/mynginx -n nginx-demo 8082:80
 ```
 
 # depois abra no navegador:
-# ```http://localhost:8082 ```  
+```http://localhost:8082 ```  
 
 
 Se tudo funcionar e quiser limpar o ambiente de teste:
@@ -349,7 +349,7 @@ Se você usa acesso local via `kubectl port-forward`:
 ```bash
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
-# abra: ```https://localhost:8080```
+ ```https://localhost:8080```
 # ignore o aviso de certificado (autoassinado)
 
 
@@ -396,4 +396,4 @@ Para acessar via port-forward:
 ```bash
 kubectl port-forward svc/mynginx -n default 8082:80
 ``` 
-# abrir: ```http://localhost:8082```
+ ```http://localhost:8082```
